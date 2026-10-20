@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lilbean</title>
+  <meta name="description" content="Small browser games and the odd website, made by lilbean.">
+  <meta property="og:title" content="lilbean">
+  <meta property="og:description" content="Small browser games and the odd website, made by lilbean.">
+  <meta property="og:image" content="img/hillside-hangout.jpg">
+  <meta name="theme-color" content="#f3eee4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="bean.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="./" aria-label="lilbean, home">
+      <img src="bean.svg" alt="" width="30" height="30">
+      <span>lilbean</span>
+    </a>
+    <nav class="jump" aria-label="Sections">
+      <a href="#games" hidden>Games</a>
+      <a href="#other" hidden>Other</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="intro">Small games and the odd website, made by lilbean. They all run in a browser tab and they're all free.</p>
+
+    <div class="work">
+      <div class="lists">
+        <section id="games" aria-labelledby="games-h" hidden>
+          <h2 id="games-h">Games <span class="count"></span></h2>
+          <ol class="rows"></ol>
+        </section>
+
+        <section id="other" aria-labelledby="other-h" hidden>
+          <h2 id="other-h">Other things <span class="count"></span></h2>
+          <ol class="rows"></ol>
+        </section>
+
+        <noscript><p class="nojs">This list needs JavaScript to show up.</p></noscript>
+      </div>
+
+      <aside class="preview" aria-hidden="true">
+        <div class="frame"></div>
+        <p class="caption"></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bottom">
+    <span>lilbean, <span class="year">2026</span></span>
+    <a href="#">Back to top</a>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
