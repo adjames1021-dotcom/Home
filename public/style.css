@@ -1,72 +1,77 @@
 :root {
-  --bg: #fff;
-  --fg: #111;
-  --blank: #eee;
+  --paper: #fff;
+  --ink: #14274e;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111;
-    --fg: #eee;
-    --blank: #222;
+    --paper: #0f1d3b;
+    --ink: #fff;
     color-scheme: dark;
   }
 }
 
 body {
   box-sizing: border-box;
-  max-width: 1280px;
+  max-width: 660px;
   margin: 0 auto;
-  padding: 32px clamp(16px, 4vw, 48px) 64px;
-  background: var(--bg);
-  color: var(--fg);
-  font: 17px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: clamp(40px, 8vh, 80px) 20px 96px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 18px/1.5 "Libre Caslon Text", Georgia, "Times New Roman", serif;
 }
 
 h1 {
-  margin: 0 0 48px;
-  font-size: inherit;
+  margin: 0 0 56px;
+  padding-bottom: 22px;
+  border-bottom: 3px double var(--ink);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-indent: 0.35em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .games {
-  display: grid;
-  gap: 40px 24px;
+  margin: 0;
+  padding: 0 0 64px 2.4rem;
+  border-bottom: 1px solid var(--ink);
 }
 
-@media (min-width: 600px) {
-  .games { grid-template-columns: repeat(2, 1fr); }
-}
+.games li + li { margin-top: 56px; }
 
-@media (min-width: 900px) {
-  .games { grid-template-columns: repeat(3, 1fr); }
-}
+.games li::marker { font-size: 1.2rem; }
 
 .games a {
+  display: block;
   color: inherit;
   text-decoration: none;
 }
 
+.games span {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.games a:hover span { text-decoration-thickness: 2px; }
+
 .games img {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
+  margin-top: 18px;
+  padding: 5px;
+  border: 1px solid var(--ink);
   object-fit: cover;
-  background: var(--blank);
-}
-
-.games span {
-  display: block;
-  margin-top: 10px;
-}
-
-.games a:hover span {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .games a:focus-visible {
-  outline: 2px solid var(--fg);
-  outline-offset: 4px;
+  outline: 2px solid var(--ink);
+  outline-offset: 6px;
 }
